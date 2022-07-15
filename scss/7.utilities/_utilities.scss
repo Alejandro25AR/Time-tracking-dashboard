@@ -1,0 +1,8 @@
+@use '../1.settings/variables';
+
+.is-selected {
+  color: variables.$neutral-color-one;
+}
+.statistic {
+  text-transform: capitalize;
+}

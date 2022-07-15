@@ -1,0 +1,54 @@
+@use '../1.settings/variables';
+
+@media screen and (min-width: 672px) {
+  .o-container {
+    &--global {
+      max-width: 40rem;
+    }
+
+    &--cards {
+      flex-direction: row;
+    }
+  }
+
+  .c-user {
+    &__photo {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+
+    &__name {
+      justify-content: center;
+
+      & h1 {
+        font-size: variables.$fs-title-l;
+      }
+    }
+  }
+
+  .c-card{
+    & {
+      width: calc(50% - 0.75rem);
+    }
+    &__content {
+      padding: 2rem;
+    }
+    &__title {
+      margin-bottom: 1rem;
+    }
+    &__symbol {
+      height: 2.5rem;
+    }
+    &__time {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+
+      & p:first-child{
+        margin-bottom: 0.5rem;
+        
+        font-size: variables.$fs-text-l;
+      }
+    }
+  }
+}

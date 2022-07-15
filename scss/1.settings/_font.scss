@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url(../assets/fonts/rubik/Rubik-Light.ttf);
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(../assets/fonts/rubik/Rubik-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(../assets/fonts/rubik/Rubik-Medium.ttf);
+    font-style: normal;
+    font-weight: 500;
+}
+
+$font-family: 'Rubik';
+
+$fs-text-s: 1rem;    
+$fs-text-m: 2rem;    
+$fs-text-l: 3.5rem;    
+
+$fs-title-s: 1.15rem;
+$fs-title-m: 1.5rem;
+$fs-title-l: 2.5rem;
+
+$fs-button: 1.15rem; 

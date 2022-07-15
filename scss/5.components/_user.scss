@@ -1,0 +1,61 @@
+@use '../1.settings/variables';
+
+.c-user {
+  & {
+    border-radius: 1rem;
+    background-color: variables.$primary-color-one;
+  }
+
+  &__profile {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem 1.5rem;
+
+    border-radius: 1rem;
+    background-color: variables.$primary-color-two;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+
+  &__button {
+    font-size: variables.$fs-button;
+    text-align: left;
+
+    color: variables.$neutral-color-two-90;
+    cursor: pointer;
+
+    transition: color 0.5s ease;
+  }
+
+  &__photo {
+    width: 50px;
+    height: 50px;
+    
+    border-radius: 50px;
+    background-color: gray;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    & p{
+      color: variables.$neutral-color-two;
+      font-weight: 400;
+    }
+    & h1 {
+      font-size: variables.$fs-title-m;
+      font-weight: 400;
+    }
+  }
+}

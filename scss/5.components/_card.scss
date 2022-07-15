@@ -1,0 +1,71 @@
+@use '../1.settings/variables';
+
+.c-card {
+  & {
+    border-radius: 1rem 1rem 2rem 2rem;
+  }
+  &--orange {
+    background-color: variables.$accent-color-orange;
+  }
+  &--blue {
+    background-color: variables.$accent-color-blue;
+  }
+  &--pink {
+    background-color: variables.$accent-color-pink;
+  }
+  &--green {
+    background-color: variables.$accent-color-green;
+  }
+  &--purple {
+    background-color: variables.$accent-color-purple;
+  }
+  &--yellow {
+    background-color: variables.$accent-color-yellow;
+  }
+
+  &__time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    & p:first-child{
+      font-size: variables.$fs-text-m;
+      font-weight: 300;
+    }
+    & p:last-child{
+      color: variables.$neutral-color-two;
+    }
+  }
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+
+    font-size: variables.$fs-title-s;
+  }
+
+  &__symbol {
+    height: 2.25rem;
+    padding-right: 1rem;
+    overflow: hidden;
+    text-align: end;
+
+    & svg {
+      position: relative;
+      top: -0.5rem;
+    }
+  }
+
+  &__content {
+    padding: 1.5rem;
+    
+    background-color: variables.$primary-color-one;
+    border-radius: 1rem;
+  }
+}

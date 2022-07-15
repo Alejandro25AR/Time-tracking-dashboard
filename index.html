@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JavaScript/main.js" type="module"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Time Tracking Dashboard</title>
+</head>
+<body>
+    <main class="o-container--prueba">
+        <div class="o-container o-container--global">
+            <section class="c-user">
+                <div class="c-user__profile">
+                    <div class="c-user__photo">
+                        <img src="assets/image/image-jeremy.png" alt="">
+                    </div>
+                    <div class="c-user__name" tabindex="1">
+                        <p>Report for</p>
+                        <h1>Jeremy Robson</h1>
+                    </div>
+                </div>
+                <div class="c-user__buttons">
+                    <button tabindex="2" id="btn-daily" class="c-user__button is-selected" disabled>Daily</button>
+                    <button tabindex="3" id="btn-weekly" class="c-user__button">Weekly</button>
+                    <button tabindex="4" id="btn-monthly" class="c-user__button">Monthly</button>
+                </div>
+            </section>
+            <div id="cards" class="o-container o-container--cards">
+                <div class="c-card c-card--orange">
+                    <div class="c-card__symbol">
+                        <svg width="79" height="79" xmlns="http://www.w3.org/2000/svg"><path d="m18.687 10.43 15.464 30.906c.31.682.743 1.322 1.3 1.88.558.557 1.198.99 1.714 1.217L68.237 59.98 52.484 75.732a8.025 8.025 0 0 1-11.355 0L2.934 37.538a8.025 8.025 0 0 1 0-11.356L18.687 10.43Zm19.345-7.99 10.839 10.838 2.065-2.064a5.845 5.845 0 0 1 8.258 0l8.258 8.259a5.845 5.845 0 0 1 0 8.258l-2.064 2.064 10.839 10.84a8.025 8.025 0 0 1 0 11.355l-4.728 4.728L39.126 40.53a1.963 1.963 0 0 1-.578-.413 1.963 1.963 0 0 1-.413-.578L21.95 7.168l4.728-4.728a8.025 8.025 0 0 1 11.355 0Zm17.033 12.903-2.064 2.065 8.258 8.258 2.064-2.064-8.258-8.259Z" fill="#D96C47" fill-rule="nonzero"/></svg>
+                    </div>
+                    <section class="c-card__content">
+                        <div class="c-card__header">
+                            <h2 tabindex="5" class="c-card__title">Work</h2>
+                            <button class="c-card__button">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                            </button>
+                        </div>
+                        <div tabindex="6" class="c-card__time">
+                            <p><span class="current"></span>hrs</p>
+                            <p>Last <span class="stat"></span> - <span class="previous"></span>hrs</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="c-card c-card--blue">
+                    <div class="c-card__symbol">
+                        <svg width="76" height="77" xmlns="http://www.w3.org/2000/svg"><path d="m60.91 71.846 12.314-19.892c3.317-5.36 3.78-13.818-2.31-19.908l-26.36-26.36c-4.457-4.457-12.586-6.843-19.908-2.31L4.753 15.69c-5.4 3.343-6.275 10.854-1.779 15.35a7.773 7.773 0 0 0 7.346 2.035l7.783-1.945a3.947 3.947 0 0 1 3.731 1.033l22.602 22.602c.97.97 1.367 2.4 1.033 3.732l-1.945 7.782a7.775 7.775 0 0 0 2.037 7.349c4.49 4.49 12.003 3.624 15.349-1.782Zm-24.227-46.12-1.891-1.892-1.892 1.892a2.342 2.342 0 0 1-3.312-3.312l1.892-1.892-1.892-1.891a2.342 2.342 0 0 1 3.312-3.312l1.892 1.891 1.891-1.891a2.342 2.342 0 0 1 3.312 3.312l-1.891 1.891 1.891 1.892a2.342 2.342 0 0 1-3.312 3.312Zm14.19 14.19a2.343 2.343 0 1 1 3.315-3.312 2.343 2.343 0 0 1-3.314 3.312Zm0 7.096a2.343 2.343 0 0 1 3.313-3.312 2.343 2.343 0 0 1-3.312 3.312Zm7.096-7.095a2.343 2.343 0 1 1 3.312 0 2.343 2.343 0 0 1-3.312 0Zm0 7.095a2.343 2.343 0 0 1 3.312-3.312 2.343 2.343 0 0 1-3.312 3.312Z" fill="#3F9CBB" fill-rule="nonzero"/></svg>
+                    </div>
+                    <section class="c-card__content">
+                        <div class="c-card__header">
+                            <h2 tabindex="7" class="c-card__title">Play</h2>
+                            <button class="c-card__button">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                            </button>
+                        </div>
+                        <div tabindex="8" class="c-card__time">
+                            <p><span class="current"></span>hrs</p>
+                            <p>Last <span class="stat"></span> - <span class="previous"></span>hrs</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="c-card c-card--pink">
+                    <div class="c-card__symbol">
+                        <svg width="79" height="79" xmlns="http://www.w3.org/2000/svg"><path d="M33.227 1.495a1.87 1.87 0 0 1 2.646 0l1.323 1.323-27.78 27.78c-2.189 2.189-2.1 5.837.088 8.026l12.132 12.132a5.624 5.624 0 0 0 1.096 6.388 5.624 5.624 0 0 0 6.389 1.097l12.132 12.132c2.188 2.188 5.837 2.276 8.025.088l27.78-27.78 1.323 1.322a1.87 1.87 0 0 1 0 2.646L46.632 78.4a1.87 1.87 0 0 1-2.645 0L29.12 63.531a5.624 5.624 0 0 1-6.389-1.097l-5.291-5.291a5.624 5.624 0 0 1-1.097-6.388L1.478 35.89a1.87 1.87 0 0 1 0-2.646ZM59.74 22.783c1.948.27 3.83 1.117 5.325 2.612l10.583 10.583a1.87 1.87 0 0 1 0 2.646L46.544 67.727a1.87 1.87 0 0 1-2.646 0L30.67 54.498a1.872 1.872 0 0 0-2.646 0ZM49.19 6.875a1.87 1.87 0 0 1 2.647 0c4.489 4.489 5.877 8.98 6.178 12.342L27.67 49.56c.349-1.527 1.181-7.463-4.938-13.582a1.87 1.87 0 0 1 0-2.646Zm-7.936-2.646a1.87 1.87 0 0 1 2.645 0l1.323 1.323-25.134 25.134a5.619 5.619 0 0 0 0 7.938c4.005 4.005 4.2 7.696 4.043 9.335L12.15 35.978a1.87 1.87 0 0 1 0-2.646Z" fill="#F04667" fill-rule="nonzero"/></svg>
+                    </div>
+                    <section class="c-card__content">
+                        <div class="c-card__header">
+                            <h2 tabindex="9" class="c-card__title">Study</h2>
+                            <button class="c-card__button">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                            </button>
+                        </div>
+                        <div tabindex="10" class="c-card__time">
+                            <p><span class="current"></span>hrs</p>
+                            <p>Last <span class="stat"></span> - <span class="previous"></span>hrs</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="c-card c-card--green">
+                    <div class="c-card__symbol">
+                        <svg width="80" height="61" viewBox="0 0 80 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32.6348 7L40.8583 7.213L49.0818 7.426C49.4118 7.435 49.7268 7.57 49.9618 7.806L59.9148 17.759C60.7989 18.64 61.3172 19.8228 61.3658 21.07L61.8798 33.94C61.8998 34.443 62.3128 34.835 62.8168 34.834L72.4118 34.784C73.5872 34.7843 74.7146 35.2509 75.5464 36.0814C76.3783 36.9119 76.8466 38.0385 76.8488 39.214V39.474C76.8488 40.638 76.3958 41.733 75.5718 42.556C75.1677 42.962 74.6873 43.2839 74.1581 43.5031C73.6289 43.7223 73.0615 43.8344 72.4888 43.833H56.7188C54.3718 43.833 52.3258 41.788 52.3258 39.44L52.3248 31.035L40.2748 31.026L40.2848 46.196C40.2858 46.622 40.0748 47.022 39.7248 47.263L21.6268 59.673C20.2638 60.522 18.6688 60.706 17.2008 60.21C16.4497 59.9567 15.7673 59.5334 15.2068 58.973C14.6827 58.4476 14.2761 57.8171 14.0138 57.123C13.1388 54.83 14.0878 52.189 16.2698 50.846L28.5728 41.873L28.8248 30.593L15.2688 31.035C15.0919 31.0411 14.9157 31.0108 14.7511 30.9459C14.5865 30.8811 14.4369 30.7831 14.3118 30.658L1.51475 17.86C0.514753 16.861 -0.0352465 15.48 0.00175346 14.068C0.0176328 13.3651 0.177998 12.673 0.47287 12.0347C0.767742 11.3965 1.19081 10.8257 1.71575 10.358C3.75775 8.518 6.94975 8.67 8.98275 10.703L17.5588 19.279L47.0028 17.644L44.8698 15.511L32.6068 15.858C31.9993 15.8819 31.3934 15.7805 30.8267 15.5603C30.2601 15.3402 29.7447 15.0058 29.3128 14.578L29.2968 14.563C28.8636 14.1316 28.5249 13.6148 28.3021 13.0455C28.0793 12.4762 27.9774 11.8668 28.0028 11.256C28.0828 8.909 30.1628 7.001 32.6348 7ZM66.4148 18.774C69.4398 15.749 74.3598 15.749 77.3848 18.774C80.4088 21.799 80.4088 26.718 77.3848 29.744C74.3598 32.768 69.4398 32.768 66.4148 29.744C63.3908 26.718 63.3898 21.799 66.4148 18.774Z" fill="#29BA66"/>
+                        </svg>
+                    </div>
+                    <section class="c-card__content">
+                        <div class="c-card__header">
+                            <h2 tabindex="11" class="c-card__title">Exersice</h2>
+                            <button class="c-card__button">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                            </button>
+                        </div>
+                        <div tabindex="12" class="c-card__time">
+                            <p><span class="current"></span>hrs</p>
+                            <p>Last <span class="stat"></span> - <span class="previous"></span>hrs</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="c-card c-card--purple">
+                    <div class="c-card__symbol">
+                        <svg width="75" height="100" xmlns="http://www.w3.org/2000/svg"><g fill="#5A1CBB" fill-rule="nonzero"><path d="M45.834 46.627c4.78 4.78 13.1 5.754 19.257-.403 5.2-5.199 5.198-13.657 0-18.855L47.151 9.428C42.335 4.614 34.02 3.7 27.892 9.83c-4.701 4.7-5.151 12.066-1.352 17.277l-6.265 6.265c-1.339 1.339-.317 3.644 1.585 3.533l13.474-.777 10.499 10.499Zm11.404-11.483a2.567 2.567 0 1 1-3.629 3.631 2.567 2.567 0 0 1 3.63-3.631ZM35.745 20.909a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm12.562 5.303a2.567 2.567 0 1 1-3.63 3.63 2.567 2.567 0 0 1 3.63-3.63ZM55.16 63.698 37.219 45.756c-5.198-5.197-13.658-5.197-18.857.001-6.072 6.073-5.26 14.4-.402 19.258l10.499 10.5-.777 13.473c-.11 1.886 2.186 2.931 3.533 1.584l6.265-6.265c5.212 3.8 12.577 3.349 17.277-1.352 6.06-6.059 5.274-14.386.403-19.257ZM25.813 57.24a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.931a2.567 2.567 0 1 1 3.63-3.629 2.567 2.567 0 0 1-3.63 3.63Zm8.932 8.933a2.567 2.567 0 1 1 3.63-3.631 2.567 2.567 0 0 1-3.63 3.63Z"/></g></svg>
+                    </div>
+                    <section class="c-card__content">
+                        <div class="c-card__header">
+                            <h2 tabindex="13" class="c-card__title">Social</h2>
+                            <button class="c-card__button">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                            </button>
+                        </div>
+                        <div tabindex="14" class="c-card__time">
+                            <p><span class="current"></span>hrs</p>
+                            <p>Last <span class="stat"></span> - <span class="previous"></span>hrs</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="c-card c-card--yellow">
+                    <div class="c-card__symbol">
+                        <svg width="67" height="67" xmlns="http://www.w3.org/2000/svg"><path d="M.918 50.848c.114 1.723.232 3.5.346 5.336l.003.038.448 6.038c.06.81.412 1.536.951 2.075.54.54 1.266.892 2.075.952l6.038.447.038.003c12.086.755 21.237 1.231 28.95.484 9.007-.873 15.369-3.445 20.02-8.096 8.413-8.413 8.398-21.609-.034-30.041-3.79-3.79-8.959-6.11-14.31-6.526-.415-5.352-2.736-10.52-6.526-14.31C30.484-1.185 17.288-1.2 8.875 7.214-1.295 17.384-.415 30.697.918 50.848ZM21.36 27.122l6.172 6.173 6.16-6.159 6.172 6.173-6.16 6.158 6.173 6.173-6.158 6.158-6.173-6.172-6.158 6.158-6.173-6.172 6.159-6.159-6.173-6.172 6.16-6.159Z" fill="#E6A532" fill-rule="nonzero"/></svg>
+                    </div>
+                    <section class="c-card__content">
+                        <div class="c-card__header">
+                            <h2 tabindex="15" class="c-card__title">Self Care</h2>
+                            <button class="c-card__button">
+                                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+                            </button>
+                        </div>
+                        <div tabindex="16" class="c-card__time">
+                            <p><span class="current"></span>hrs</p>
+                            <p>Last <span class="stat"></span> - <span class="previous"></span>hrs</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

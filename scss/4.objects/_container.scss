@@ -1,0 +1,24 @@
+.o-container {
+  & {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--prueba {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--global {
+    max-width: 400px;
+    gap: 1.5rem;
+    margin: 5rem 1.5rem;
+  }
+
+  &--cards {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
